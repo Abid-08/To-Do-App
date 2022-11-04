@@ -15,14 +15,8 @@ const [lastname, setLastName] = useState('')
 const [email, setEmail] = useState('')
 const [password,setPassword] = useState('')
 
-const [profilePhoto, setProfilePhoto] = useState("");
+const [profilePhoto, setProfilePhoto] = useState({});
 
-const onSubmitHandler = async () => {
-  
- console.log(profilePhoto)
-
-  // setItems([...items, result]);
-}
 
 const callApi = async () => {
   const res = await signUpRoute(email,firstname,lastname, password, profilePhoto)
@@ -32,6 +26,7 @@ const callApi = async () => {
   const tasks = await getAllRoute()
   console.log(tasks)
   settingUser(res[1],data.email,data.FirstName,data.LastName,password,profilePhoto)
+  console.log(console.log(profilePhoto))
 settingTasks(tasks)
 }
 
@@ -67,13 +62,7 @@ settingTasks(tasks)
             <div className="form-control">
                 <label>Profile Photo</label>
 
-                <form action="" onSubmit={onSubmitHandler}>
-        {/* <input type="text" className="input-field"
-
-          onChange={e => setProfilePhoto({ ...profilePhoto, title: e.target.value })}
-        /> */}
-
-
+                <form action="">
         <FileBase64
           type="file"
           multiple={false}
@@ -92,7 +81,7 @@ settingTasks(tasks)
 
             <div className={styles.actionsContainer}>
                
-            <Link to='/home'> <button className={styles.addBtn} onClick={() => (setIsOpen(false), callApi(),onSubmitHandler())}>
+            <Link to='/home'> <button className={styles.addBtn} onClick={() => (setIsOpen(false), callApi())}>
                 Add
               </button></ Link>
               <button

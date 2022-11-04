@@ -16,13 +16,13 @@ const UpdateModal = ({ setIsOpen, task, updateTodo }) => {
   const popUp = (x) => {
    toast.info(x, {
 position: "top-right",
-autoClose: 1000,
+autoClose: 2000,
 hideProgressBar: true,
 closeOnClick: true,
 pauseOnHover: false,
 draggable: true,
 progress: undefined,
-theme: "colored",
+theme: "light",
 });
   }
 
@@ -45,7 +45,7 @@ theme: "colored",
 
               <div className="form-control">
                 <label>Description</label>
-                <input className={styles.textboxModal} type='text' placeholder='Add Description' value={description} onChange={(e) => setDescription(e.target.value)} />
+                <input className={styles.textboxModal}  type='text' placeholder='Add Description' value={description} onChange={(e) => setDescription(e.target.value)} />
               </div>
 
             </form>

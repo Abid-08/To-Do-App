@@ -10,7 +10,7 @@ const UserDetails = ({user, updateUser}) => {
 <box className='userBox'>
 
     <div>
-      <img src={user.userImage} alt='photo'></img>
+      <img src={user.userImage} alt='photo'/>
       <p>Name:   <b>   {user.firstName} {user.lastName}</b></p>
       <p>Email:   <b>  {user.email}</b></p>
       <button className='btn' onClick= {(()=> (setIsOpen(true)))}>Edit Profile</button>

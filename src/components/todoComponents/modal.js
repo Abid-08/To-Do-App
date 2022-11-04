@@ -20,7 +20,16 @@ const Modal = ({ setIsOpen, addNewTask }) => {
   }
 
   const popUp = (x) => {
-    toast.success(x)
+    toast.success(x,
+      {position: "top-right",
+    autoClose: 2000,
+ hideProgressBar: true,
+ closeOnClick: true,
+ pauseOnHover: false,
+ draggable: true,
+ progress: undefined,
+ theme: "light",
+ })
   }
 
   return (

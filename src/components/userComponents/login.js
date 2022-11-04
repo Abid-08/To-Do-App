@@ -22,7 +22,7 @@ const Login = ({settingUser, settingTasks}) => {
     console.log(data)
     const tasks = await getAllRoute()
     console.log(tasks)
-    settingUser(res[1],data.email,data.FirstName,data.LastName,password)
+    settingUser(res[1],data.email,data.FirstName,data.LastName,password, data.userImage)
 settingTasks(tasks)
   }
 

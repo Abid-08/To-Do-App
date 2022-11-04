@@ -9,7 +9,16 @@ import 'react-toastify/dist/ReactToastify.css';
 const DeleteModal = ({ setIsOpen2,onDelete, task }) => {
 
   const popUp = (x) => {
-    toast.warn(x)
+    toast.warn(x,
+      {position: "top-right",
+    autoClose: 2000,
+ hideProgressBar: true,
+ closeOnClick: true,
+ pauseOnHover: false,
+ draggable: true,
+ progress: undefined,
+ theme: "light",
+ })
   }
 
   return (

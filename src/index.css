@@ -534,6 +534,8 @@ h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif!important;
   }
   .navbar .links {
+    display: flex;
+    align-items: center;
     margin-left: auto;
   }
   .navbar a {
@@ -549,6 +551,14 @@ h1{
     max-width: 600px;
     margin: 40px auto;
     padding: 20px;
+  }
+  .userphotoNav {
+
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+margin-right: 10px;
+margin-top: -5px;
   }
 
   a {
@@ -566,6 +576,10 @@ h1{
     padding: 16px;
     font-size: 16px;
     border: none;
+    display: flex;
+    flex-direction: row;
+    
+    font-size: larger;
   }
   
   .dropdown {
@@ -742,6 +756,10 @@ h1{
   .emailText {
     margin-left:1%!important;
   }
+
+  .userBox{
+    margin-left: 28%!important;
+  }
 }
 
 @media only screen and (min-width: 1300px) {
@@ -752,7 +770,7 @@ h1{
   }
 
   .emailText {
-    margin-left: 10%!important;
+    margin-left: 0%!important;
   }
 
   .loginpage{
@@ -760,8 +778,10 @@ h1{
   }
 
   .passwordText {
-    margin-left: 13%!important;
+    margin-left: 0%!important;
   }
+
+ 
 
 }
 
@@ -804,8 +824,8 @@ h1{
   border: 1px solid rgba(62, 62, 62, 0.493);
   border-radius: 15px;
   margin-right: 40%;
-  margin-left: 35%;
-  background-color: #4e4e4e76;
+  margin-left: 35px;
+  background-color: #00000076;
   height: fit-content;
   width: 30%;
 }
@@ -835,5 +855,16 @@ h1{
 .userBox img{
   border-radius: 100px;
   margin : 3%;
-  margin-left: -1%;
+  margin-left: 20px;
+  height: 100px;
+  width: 100px;
+}
+
+.photoButton{
+  display: flex;
+  align-items: center;
+  text-align: center;
+margin-left: 55px;
+margin-right: -55px;
+
 }

@@ -14,6 +14,7 @@ const signInRoute = async (email, password) => {
 }
 
 const signUpRoute = async (email, fName,lName,password, profilePhoto) => {
+  console.log(profilePhoto,"    invdsjfbjkgdsjk")
     const res = await axios.post('http://localhost:5500/users', {
       "email": email,
       "FirstName": fName,
@@ -37,11 +38,12 @@ const getRoute = async (id) => {
                 return res.data
 }
 
-const updateRoute = async (id,email,NewFirstname,newLastname) => {
+const updateRoute = async (id,email,NewFirstname,newLastname, image) => {
     const res = await axios.put(`http://localhost:5500/users/${id}`, {
                   "email" : email,
                   "FirstName": NewFirstname,
-                  "LastName" : newLastname
+                  "LastName" : newLastname,
+                  "userImage" : image
                  },{
                   headers: {
                     'Authorization' : localStorage.getItem('token')

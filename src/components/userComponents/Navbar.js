@@ -8,7 +8,7 @@ const Navbar = ({ user }) => {
       <div className="links">
         <Link to="/home">Home</Link>
         <div class="dropdown">
-          <button class="dropbtn">{user.firstName} {user.lastName}</button>
+          <button class="dropbtn"><img className='userphotoNav' src={user.userImage} alt='photo'/>{user.firstName} {user.lastName}</button>
           <div class="dropdown-content">
             <Link to="/user">Details</Link>
             <Link to="/" onClick={() => localStorage.removeItem('token')} >Logout</Link>

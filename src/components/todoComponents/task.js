@@ -13,7 +13,25 @@ const Task = ({ task, onDelete, updateCompleted, updateTodo }) => {
   const [isOpen2, setIsOpen2] = useState(false)
 
   const popUp = () => {
-   !task.completed ? toast.success(`Task: ${task.text} Completed`) : toast.warn(`Task: ${task.text} Not Completed`)
+   !task.completed ? toast.success(`Task Image: ${task.text} Completed`,
+     {position: "top-right",
+   autoClose: 2000,
+hideProgressBar: true,
+closeOnClick: true,
+pauseOnHover: false,
+draggable: true,
+progress: undefined,
+theme: "light",
+}) : toast.warn(`Task: ${task.text} Not Completed`,
+  {position: "top-right",
+autoClose: 2000,
+hideProgressBar: true,
+closeOnClick: true,
+pauseOnHover: false,
+draggable: true,
+progress: undefined,
+theme: "light",
+})
    
   }
 

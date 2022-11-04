@@ -20,14 +20,15 @@ function App() {
 
   const [tasks, setTasks] = useState([{}])
 
-  const settingUser = (id, email, firstname, lastname, password, profilePhoto) => {
-    const newUser = { firstName: firstname, lastName: lastname, email: email, password: password, id: id, image: profilePhoto }
+  const settingUser = (id, email, firstname, lastname, password, photo) => {
+    console.log(photo,'photo in setting')
+    const newUser = { firstName: firstname, lastName: lastname, email: email, password: password, id: id, userImage: photo }
     console.log(newUser, 'newuser')
     setUser(newUser)
   }
 
-  const updateUser = (firstname, lastname) => {
-    setUser({ ...user, firstName: firstname, lastName: lastname })
+  const updateUser = (firstname, lastname, image) => {
+    setUser({ ...user, firstName: firstname, lastName: lastname, userImage: image })
   }
 
   const settingTasks = (tasksIncoming) => {
